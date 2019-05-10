@@ -4,8 +4,9 @@ This application demonstrate the use of HiveStreaming v2(Hive3), the application
 more information can be found here :- [https://cwiki.apache.org/confluence/display/Hive/Streaming+Data+Ingest+V2]
 
 #### Create table with following Schema upfront
-```   create table alerts ( id int , msg string )
-        partitioned by (continent string, country string)
+```   
+create table students ( id int , name string )
+        partitioned by (year string, month string)
           clustered by (id) into 2 buckets
            stored as orc tblproperties("transactional"="true");
 ```

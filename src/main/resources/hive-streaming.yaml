@@ -1,0 +1,6 @@
+METASTORE_URI: "thrift://hdp32b.hdp.local:9083"
+DB_NAME: "default"
+TABLE_NAME: "students"
+PARTITION_VALUES:
+  - '2018'
+  - '12'
