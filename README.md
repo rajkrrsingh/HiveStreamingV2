@@ -1,5 +1,5 @@
 # HiveStreamingV2
-This application demonstrate the use of HiveStreaming v2(Hive3), the application is using static partitioning to write to hive acid table.
+This application devloped and tested on HDP-3.1.0.0-78 and demonstrate the use of HiveStreaming v2(Hive3), the application is using static partitioning to write to hive acid table.
 
 more information can be found here :- [https://cwiki.apache.org/confluence/display/Hive/Streaming+Data+Ingest+V2]
 
@@ -25,5 +25,18 @@ su - hive
 java -cp .:/tmp/HiveStreamingV3-1.0-SNAPSHOT.jar:/usr/hdp/3.1.0.0-78/hive/lib/*:`hadoop classpath` com.rajkrrsingh.test.hivestreaming.HiveStreamingV3```
 
 
+```
 
-[]: https://cwiki.apache.org/confluence/display/Hive/Streaming+Data+Ingest+V2
+#### Result
+```$xslt
+ hive -e "select * from students"
+ +--------------+----------------+----------------+-----------------+
+ | students.id  | students.name  | students.year  | students.month  |
+ +--------------+----------------+----------------+-----------------+
+ | 2            | val2           | 2018           | 12              |
+ | 1            | val1           | 2018           | 12              |
+ | 3            | val3           | 2018           | 12              |
+ | 4            | val4           | 2018           | 12              |
+ +--------------+----------------+----------------+-----------------+
+
+```
